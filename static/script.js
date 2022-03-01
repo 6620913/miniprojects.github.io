@@ -12,8 +12,9 @@ decr_numbers.forEach(number => {
         const num = number.innerText;
         dcr = decr_by;
         if (num > target) {
+            
             number.innerText = num - dcr;
-            setTimeout(updateNumber, 100);
+            setTimeout(updateNumber, 500);
         }
         else {
             number.innerText = target;
