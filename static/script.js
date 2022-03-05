@@ -17,7 +17,7 @@ function counter() {
                 document.getElementById("lh").style.display = "block";
                 console.log("lH");
             }
-            if (num < 10) {
+            if (num <= 10) {
                 document.getElementById('lt').style.display = 'block';
             }
 
