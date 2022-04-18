@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<button onclick="creat()">add</button>
+
+
+
+
+<script>
+
+function delt(ev){
+ let elem = document.getElementById(ev.target.id);
+ elem.style.display = "none";
+}
+function creat() {
+  
+  let element = document.createElement("div");
+ 
+  
+   randomcolor = random_hex_color_code();
+  element.style.backgroundColor =randomcolor;
+  
+element.setAttribute("onclick","delt(event);");
+  element.style.width ="100px";
+  element.style.height="100px";
+   element.setAttribute("id",randomcolor);
+  
+  element.innerHTML = randomcolor;
+  console.log(randomcolor);
+  document.body.appendChild(element);
+  
+  
+  
+}
+
+
+
+const random_hex_color_code = () => {
+  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  return '#' + n.slice(0, 6);
+};
+</script>
+
+
+</body>
+</html>
